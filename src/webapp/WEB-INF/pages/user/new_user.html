@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>New User</title>
+</head>
+<body>
+<div th:align="center">
+  <h2>New Customer</h2>
+<!--  <form th:action="@{/users}" th:method="post" th:object="${newUser}">-->
+<!--    <label for="name">Enter name: </label>-->
+<!--    <input type="text" th:field="*{name}" id="name"/>-->
+<!--    <br/>-->
+<!--    <label for="last_name">Enter last_name: </label>-->
+<!--    <input type="text" th:field="*{last_name}" id="last_name"/>-->
+<!--    <br/>-->
+<!--    <label for="email">Enter email: </label>-->
+<!--    <input type="text" th:field="*{email}" id="email"/>-->
+<!--    <br/>-->
+<!--    <label for="age">Enter age: </label>-->
+<!--    <input type="text" th:field="*{age}" id="age"/>-->
+<!--    <br/>-->
+<!--    <input type="submit" value="Create"/>-->
+<!--  </form>-->
+  <form th:action="@{/users}" th:method="post" th:object="${newUser}">
+    <table th:border="0" th:cellpadding="5">
+      <tr>
+        <td>Name:</td>
+        <td><label>
+          <input type="text" th:field="*{name}"/>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><label>
+          <input type="text" th:field="*{last_name}"/>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><label>
+          <input type="text" th:field="*{email}"/>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td><label>
+          <input type="text" th:field="*{age}"/>
+        </label></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Save"></td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>
